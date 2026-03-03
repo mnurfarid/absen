@@ -14,4 +14,6 @@ jobs:
         with:
           python-version: "3.11"
 
-      - run: python --version
+      - run: pip install selenium webdriver-manager
+
+      - run: echo "Dependency aman"
