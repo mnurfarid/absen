@@ -14,6 +14,16 @@ jobs:
         with:
           python-version: "3.11"
 
-      - run: pip install selenium webdriver-manager
+      - name: Install Google Chrome
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
 
-      - run: echo "Dependency aman"
+      - name: Install dependencies
+        run: pip install selenium webdriver-manager
+
+      - name: Run script
+        run: python main.py
+        env:
+          USERNAME: ${{ secrets.USERNAME }}
+          PASSWORD: ${{ secrets.PASSWORD }}
