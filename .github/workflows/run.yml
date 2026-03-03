@@ -5,7 +5,7 @@ on:
     - cron: "*/15 * * * *"
   workflow_dispatch:
 
-jobs:
+jjobs:
   run:
     runs-on: ubuntu-latest
 
